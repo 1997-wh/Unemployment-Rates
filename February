@@ -1,9 +1,6 @@
 february_data <- unemployment_rate_by_age_groups %>%
   filter(Month == "February")
 
-february_data <- unemployment_rate_by_age_groups %>%
-  filter(Month == "February")
-
 # Look for the data in the  column
 sorted_february_data <- february_data %>%
   arrange("February")  
