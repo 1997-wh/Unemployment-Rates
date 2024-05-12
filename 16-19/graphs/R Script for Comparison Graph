@@ -1,0 +1,16 @@
+unemployment_february <- c(0.184, 0.259, 0.330, 0.344, 0.353, 0.345, 0.298, 0.240, 0.205, 0.187, 0.173, 0.149, 0.148, 0.242, 0.146, 0.115, 0.175)
+unemployment_march <- c(0.187, 0.262, 0.336, 0.345, 0.359, 0.333, 0.301, 0.228, 0.199, 0.195, 0.167, 0.150, 0.151, 0.245, 0.136, 0.123, 0.179)
+unemployment_april <- c(0.187, 0.268, 0.343, 0.342, 0.361, 0.327, 0.299, 0.226, 0.196, 0.195, 0.158, 0.155, 0.167, 0.231, 0.130, 0.127, .000)
+years <- c(2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024)
+
+
+ggplot() +
+  geom_line(aes(x = years, y = unemployment_february, color = "February")) +
+  geom_line(aes(x = years, y = unemployment_march, color = "March")) +
+  geom_line(aes(x = years, y = unemployment_april, color = "April")) +
+  scale_x_continuous(breaks = years) +
+  labs(title = "Unemployment Rate Comparison for Three Months Across Years",
+       x = "Year",
+       y = "Unemployment_Rate",
+       color = "Month") +
+  theme_minimal()
