@@ -1,0 +1,8 @@
+ggplot(april_data, aes(x = Year, y = `Age 16-19`)) +
+  geom_point() + 
+  geom_line() +   
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  # Add trendline
+  geom_text(aes(label = ifelse(`Age 16-19` == max(`Age 16-19`), as.character(`Age 16-19`), "")), vjust = -0.5) +  
+  labs(title = "Month of April", x = "Year", y = "Unemployment Rate") +  # Customize chart labels
+  scale_x_continuous(breaks = seq(min(april_data$Year), max(april_data$Year), by = 1)) +  
+  scale_y_continuous(labels = scales::percent_format())
