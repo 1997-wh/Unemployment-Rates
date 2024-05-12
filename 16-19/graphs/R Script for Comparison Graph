@@ -9,6 +9,7 @@ ggplot() +
   geom_line(aes(x = years, y = unemployment_march, color = "March")) +
   geom_line(aes(x = years, y = unemployment_april, color = "April")) +
   scale_x_continuous(breaks = years) +
+  scale_y_continuous(labels = scales::percent_format())
   labs(title = "Unemployment Rate Comparison for Three Months Across Years",
        x = "Year",
        y = "Unemployment_Rate",
